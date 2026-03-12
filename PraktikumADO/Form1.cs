@@ -53,6 +53,12 @@ namespace PraktikumADO
 
                 conn.Close();
             }
-            
+            catch (Exception ex)
+            {
+                // Urutan MessageBox: (Pesan, Judul, Tombol, Ikon)
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        
     }
 }
