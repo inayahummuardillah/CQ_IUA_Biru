@@ -28,7 +28,16 @@ namespace PraktikumADO
         
                 int jumlah = Convert.ToInt32(cmd.ExecuteScalar());
                 txtHasil.Text = jumlah.ToString();
-                {
+        
+                // Tambahkan ini untuk memastikan tombolnya bekerja
+                MessageBox.Show("Berhasil mengambil data mahasiswa: " + jumlah, "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
+                conn.Close();
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
+        
     }
 }
