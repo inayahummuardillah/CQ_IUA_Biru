@@ -81,6 +81,13 @@ namespace PraktikumADO
 
                 conn.Close();
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show("Message", ex.Message, MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        
     }
 }
