@@ -88,6 +88,24 @@ namespace PraktikumADO
             }
         }
 
-        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConnect_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi();
+                conn.Open();
+
+                MessageBox.Show("Message", "Koneksi ke Database Berhasil", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                conn.Close();
+            }
+            
+        }
     }
 }
