@@ -108,7 +108,7 @@ namespace PraktikumADO
             catch (Exception ex)
             {
                 MessageBox.Show("Message", ex.Message, MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning):
+                    MessageBoxIcon.Warning);
             }
         }
     }
