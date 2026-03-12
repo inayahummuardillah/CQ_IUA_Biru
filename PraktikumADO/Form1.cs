@@ -71,6 +71,16 @@ namespace PraktikumADO
                 koneksi();
                 conn.Open();
 
-                { 
+                string query = "update mahasiswa set Alamat = 'Yogyakarta' where NIM = '23110100001'";
+
+                cmd = new MySqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Jumlah baris terpengaruh : " + hasil, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                conn.Close();
+            }
+            
     }
 }
