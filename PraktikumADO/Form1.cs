@@ -45,6 +45,14 @@ namespace PraktikumADO
                 koneksi();
                 conn.Open();
 
-                {
+                string query = "select count(*) from matakuliah";
+                cmd = new MySqlCommand(query, conn);
+
+                // Langsung tampilkan ke TextBox tanpa harus lewat variabel int
+                txtHasil.Text = cmd.ExecuteScalar().ToString();
+
+                conn.Close();
+            }
+            
     }
 }
