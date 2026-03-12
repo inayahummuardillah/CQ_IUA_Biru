@@ -20,12 +20,15 @@ namespace PraktikumADO
 
        private void btnHitungMhs_Click(object sender, EventArgs e)
         {
-            try
-            {
+            try {
                 koneksi();
                 conn.Open();
                 string query = "select count(*) from mahasiswa"; // Pastikan huruf kecil sesuai database
                 cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn);
-            }
+        
+                int jumlah = Convert.ToInt32(cmd.ExecuteScalar());
+                txtHasil.Text = jumlah.ToString();
+                {
+        }
     }
 }
